@@ -1,0 +1,79 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>HTML5 File API</title>
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      background: #0f0;
+    }
+
+    .output {
+      margin: 20px;
+      padding: 20px;
+      background: gray;
+      border-radius: 10px;
+      font-size: 80px;
+      width: 410px;
+      color: white;
+      float: left;
+      text-align: center;
+    }
+  </style>
+  <div>
+    <form class="form-horizontal well">
+      <legend>
+        <h3>
+          <div id="title">QOU</div>
+        </h3>
+      </legend>
+      <fieldset>
+        <label for="csvFileInput">
+          <strong>CSV File:</strong>
+        </label>
+        <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
+        <!--   -->
+
+        <input type="submit" value="Reset" />
+        <input type="button" value="Start" onclick="javascript:setStart(1)" />
+        <input type="button" value="Stop" onclick="javascript:setStop(1)" />
+        <!-- <script>
+
+                var txtFile = "example.csv"
+                var file = new File(txtFile);
+                handleFiles(file);
+          </script>  -->
+  </div>
+  </fieldset>
+  </form>
+
+  <div id="output"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div style="overflow: hidden; text-align: center; display: flex;">
+    <div style="margin: 0 auto;" class="output" id="output0">----------</div>
+
+  </div>
+  </div>
+
+
+
+  <!-- Le javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="js/read-csv.js"></script>
+</body>
+
+</html>

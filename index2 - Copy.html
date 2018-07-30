@@ -1,0 +1,75 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>HTML5 File API</title>
+</head>
+<body >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<style>
+  body {
+    background: #000;
+  }
+.output {
+    margin: 20px;
+    padding: 20px;
+    background: gray;
+    border-radius: 10px;
+    font-size: 80px;
+    width: 80px;
+    color: white;
+    float: left;
+    text-align: center;
+}
+</style>
+  <div>
+    <form class="form-horizontal well">
+      <legend>
+        <h3>
+          <div id="title">HTML5 File API</div>
+        </h3>
+      </legend>
+      <fieldset>
+           <label for="csvFileInput"> <strong>CSV File:</strong>
+          </label>
+          <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
+          <input type="submit" value="Reset"/>      
+          <!-- <script>
+
+                var txtFile = "example.csv"
+                var file = new File(txtFile);
+                handleFiles(file);
+          </script>  -->
+        </div>
+      </fieldset>
+    </form>
+
+    <div id="output"></div>
+    <br><br><br><br><br><br><br><br><br>
+    <div>
+    <div class="output" id="output0">--</div>
+    <div class="output" id="output1">--</div>
+    <div class="output" id="output2">--</div>
+    <div class="output" id="output3">--</div>
+    <div class="output" id="output4">--</div>    
+    <div class="output" id="output5">--</div>
+    <div class="output" id="output6">--</div>
+    <div class="output" id="output7">--</div>
+    <div class="output" id="output8">--</div>
+    <div class="output" id="output9">--</div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <footer>
+    <center>
+      <p>&copy; Mounir Messelmeni 2012</p>
+    </center>
+  </footer>
+
+  <!-- Le javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="js/read-csv.js"></script> -->
+</body>
+</html>

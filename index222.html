@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<style>
+  body {
+    background: #000;
+  }
+.output {
+    margin: 20px;
+    padding: 20px;
+    background: gray;
+    border-radius: 10px;
+    font-size: 80px;
+    width: 80px;
+    color: white;
+    float: left;
+    text-align: center;
+}
+</style>
+<script>
+  $( document ).ready(function() {
+
+
+
+    
+    console.log( "ready!" );
+  var numbers = [0, 4, 3, 9, 1, 0, 1, 5, 7, 3];
+function generateNumber(index) {
+  var desired = numbers[index];
+  var duration = 2000;
+
+  var output = $('#output' + index); // Start ID with letter
+  var started = new Date().getTime();
+
+  animationTimer = setInterval(function() {
+    
+    if (output.text().trim() === desired || new Date().getTime() - started > duration) {
+      clearInterval(animationTimer); // Stop the loop
+      output.text(desired); // Print desired number in case it stopped at a different one due to duration expiration
+     
+    } else {
+      output.text(
+        '' +
+        Math.floor(Math.random() * 10) 
+       
+      );
+    }
+    generateNumber(index + 1);
+  }, 100);
+}
+
+generateNumber(0);
+});
+</script>
+  <div class="output" id="output0">--</div>
+  <div class="output" id="output1">--</div>
+  <div class="output" id="output2">--</div>
+  <div class="output" id="output3">--</div>
+  <div class="output" id="output4">--</div>
+  <div class="output" id="output5">--</div>
+  <div class="output" id="output6">--</div>
+  <div class="output" id="output7">--</div>
+  <div class="output" id="output8">--</div>
+  <div class="output" id="output9">--</div>
+</body>
+</html>
